@@ -2,10 +2,60 @@ div {
   background-color: green;
 }
 
-.div {
-  margin: 20px;
-  border: 30px black black;
-  @inclu;
-  background-color: #fff;
+@media (max-width: 366px) {
+  .media {
+    font-size: 10px;
+  }
+  .media::after {
+    content: "xxs";
+  }
+}
+@media (max-width: 566px) {
+  .media {
+    font-size: 12px;
+  }
+  .media::after {
+    content: "xs";
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .media {
+    font-size: 14px;
+  }
+  .media::after {
+    content: "sm";
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .media {
+    font-size: 16px;
+  }
+  .media::after {
+    content: "md";
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .media {
+    font-size: 18px;
+  }
+  .media::after {
+    content: "lg";
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .media {
+    font-size: 20px;
+  }
+  .media::after {
+    content: "xl";
+  }
+}
+@media (min-width: 1400px) {
+  .media {
+    font-size: 22px;
+  }
+  .media::after {
+    content: "xxl";
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -80,3 +80,91 @@
     //         background-color:$violet;
     //     }
     // }
+    // application
+        // $cols :12;
+        // @for $i from 1 through 12{
+        //         .class-#{$i}{
+        //             width: percentage($i/$cols);
+        //         }
+        //     }
+// foreach 
+    // array 
+        // $colors :red,green,black,violet; >> you can add how much you want before cama (,)
+        // @each $color in $colors { 
+        //     .div-#{$color}{
+        //         color: $color;
+        //         background-color: $color;
+        //     }
+        // }
+
+        //  $colors :"color" red ,"margin"green; 
+        // @each $propirty, $valeu in $colors { 
+        //     .div-#{$propirty}{
+        //         #{$propirty}: $valeu;         
+        //     }
+        // }
+
+    // array asoiative 
+        // $colors :("youtube":red,"spotify":green,"gihub":black);
+        // @each $nam, $color in $colors { 
+        //     .div-#{$color}{
+            
+        //         &::befor{
+        //             content:"#{$nam}";
+        //             color: $color;
+        //             border-radius: solid 22px $color;
+        //             translate: 22px;
+        //         }
+        //     }
+        // }
+// while 
+    //     $start : 10;
+    // @while $start <= 100{
+    //     .class1{
+    //         margin: 1px * $start; 
+    //     }
+    //     $start: $start + 10;
+    // }
+// function 
+    // @function percentag($number,$cols){
+    //     @return percentage($number / $cols) 
+    // }
+
+// application loop + content 
+    // @mixin breakpoint($point){
+    //     @if $point == sm {
+    //         @media (min-width: 576px ) and (max-width:768px){
+    //             @content;               
+    //         }
+    //     }@else if $point == md{
+    //         @media (min-width: 768px ) and (max-width:992px) {
+    //             @content;              
+    //         }
+    //     }@else if $point == lg{
+    //         @media (min-width: 992px ) and (max-width:1200px) {
+    //             @content;               
+    //         }
+    //     }@else if $point == xlg{
+    //         @media (min-width: 1200px ) and (max-width:1400px) {
+    //             @content;               
+    //         }
+    //     }@else if $point == xxlg{
+    //         @media (min-width: 1400px )  {
+    //             @content;                
+    //         }
+    //     }@else {
+    //         @media (max-width: 566px ) {
+    //             @content;                 
+    //         } 
+    //     }
+    // }
+    // .media {
+    //     $media : sm,md,lg,xlg,xxlg;
+    //     $font : 0;
+    //    @each $size in $media{
+    //     @include breakpoint($size){
+    //         font-size: $font+10px;  
+    //     }
+    //     $font : $font + 4; 
+    //     }
+    // }  
