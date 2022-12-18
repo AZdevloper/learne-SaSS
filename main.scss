@@ -1,5 +1,30 @@
-@for $i from 1 through 50{
-    .class-#{$i}{
-        font-size: 10px + $i;
+// import global rules
+@use "./sas/layout/global-rules";
+//-------
+@import "./sas/pages/contactstyle";
+
+// @for $i from 1 through 2{
+//     .class-#{$i}{
+//         font-size: 10px + $i;
+//     }
+//     .class-#{$i+1}{
+//         color: var(--main_color);
+//         background-color:$violet;
+//     }
+
+// }
+
+@mixin functionh($i){
+        margin: $var1;
     }
+
+@mixin function($var1,$var2){
+    margin: $var1;
+    border: 30px black #{$var2};
+    @include functionh($var1);
+    
+}
+.div{
+    @include function(20px,"black");
+    background-color: #fff;
 }
